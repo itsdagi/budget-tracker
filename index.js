@@ -1,11 +1,12 @@
-const form = document.querySelector(".add")
+const form = document.querySelector(".addd");
+let transactions =[];
 
 form.addEventListener("submit", event=>{
   event.preventDefault()
-
   const transaction = {
     source: form.source.value,
     amount: form.amount.value
-  }
-    localStorage.setItem("transaction", JSON.stringify(transaction));
+  };
+  transactions.push(transaction);
+  localStorage.setItem("transactions", JSON.stringify(transactions));
 })
