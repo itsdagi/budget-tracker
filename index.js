@@ -1,4 +1,4 @@
-const form = document.querySelector(".addd");
+const form = document.querySelector(".add");
 let transactions =[];
 
 form.addEventListener("submit", event=>{
