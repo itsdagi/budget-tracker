@@ -7,7 +7,8 @@ form.addEventListener("submit", event=>{
   const transaction = {
     id: Math.floor(math.random()*100000),
     source: form.source.value,
-    amount: form.amount.value
+    amount: form.amount.value,
+    time: `${time.toLocaleTimeString()} ${time.toLocaleDateString()}`
   };
   transactions.push(transaction);
   localStorage.setItem("transactions", JSON.stringify(transactions));
