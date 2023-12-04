@@ -1,5 +1,5 @@
 const form = document.querySelector(".add");
-let transactions =[];
+let transactions = localStorage.getItem("transactions") !== null ?JSON.parse(localStorage.getItem("transactions")): [])
 
 form.addEventListener("submit", event=>{
   event.preventDefault()
